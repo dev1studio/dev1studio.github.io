@@ -122,7 +122,6 @@ function Container({ children }) {
         <Nav>
           <ol>
             <li><LinkButton href='/bio'><span><b>B</b><i>io</i></span></LinkButton></li>
-            <li><LinkButton href='/organizations'><span><b>O</b><i>rganizations</i></span></LinkButton></li>
             <li><LinkButton href='/projects'><span><b>P</b><i>rojects</i></span></LinkButton></li>
           </ol>
         </Nav>
