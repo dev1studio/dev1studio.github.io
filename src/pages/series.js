@@ -11,11 +11,11 @@ function IndexPage() {
   return (
     <Container>
       <SEO
-        title="Home"
+        title="Series"
       />
       <main className={styles['mainPage']}>
         <Profile />
-        <Route route='home' />
+        <Route route='series' />
         <ul>
           {posts.map(post => (
             <li key={post.id}>

@@ -5,6 +5,7 @@ const posts = [
     id: uuidv4(),
     thumbnail: "/20211012/summary.png",
     subject: "CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교",
+    category: "Devil Styled Sheets",
     url: "/O612/20211012",
     datetime: "2021.10.12",
     badge: true,
