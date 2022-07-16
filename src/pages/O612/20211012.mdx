@@ -1,0 +1,17 @@
+import SEO from '../../components/utilities/withHead'
+import Container from '../../components/layout'
+import * as styles from '../../styles/Articles.module.sass'
+import Article20211012 from './article20211012'
+import Profile from '../../components/pages/profile.js'
+
+<Container>
+  <SEO
+    title="CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교"
+    description="emotion, styled-components 그리고 Sass, CSS의 비교"
+  />
+  <article className={styles['articlePage']}>
+    <Article20211012 />
+    <strong className={styles['articleFIN']}>FIN!</strong>
+  </article>
+  <aside><Profile /></aside>
+</Container>

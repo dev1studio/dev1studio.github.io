@@ -1,0 +1,72 @@
+@import '../styles/designSystem.sass'
+
+$thumbnail-vertical: 630
+$thumbnail-horizontal: 1200
+
+.mainPage
+  overflow: hidden
+
+  ul
+    display: flex
+    flex-wrap: wrap
+    margin: 0 rem(-15)
+    padding-top: rem(100)
+
+    +mq(maxTablet)
+      padding-top: rem(50)
+
+    li
+      padding: 0 rem(15)
+      width: 50%
+
+      a
+        display: flex
+        flex-direction: column
+        color: $color-light
+
+        &:hover, &:focus
+          i
+            transform: scale(1.1)
+
+          strong
+            text-decoration: underline
+
+        .listThumbnail
+          position: relative
+          border-radius: rem(5)
+          overflow: hidden
+
+          i
+            +not-supports-aspect-ratio-box($thumbnail-horizontal, $thumbnail-vertical)
+            background: no-repeat 50% 50%/cover
+            transition: .15s linear
+
+          span
+            position: absolute
+            background-color: rgba($color-dark, .9)
+            display: inline-block
+            top: rem(10)
+            left: rem(10)
+            padding: rem(5) rem(10)
+            border-radius: rem(2)
+            +font-weight(bold)
+            font-size: rem(12)
+
+        strong
+          +mixin(ellipsis)
+          margin: rem(15) 0
+          font-size: rem(18)
+          font-weight: 700
+
+        p
+          +clamp(3, 57, 1.35)
+          margin-bottom: rem(15)
+          max-height: none
+          height: rem(57)
+          font-size: rem(14)
+          font-weight: 400
+          opacity: .7
+
+        time
+          font-size: rem(12)
+          opacity: .5
