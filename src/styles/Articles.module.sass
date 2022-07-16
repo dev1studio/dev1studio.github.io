@@ -3,16 +3,16 @@
 .articlePage
   padding: rem(25)
 
+  +mq(minXsmall)
+    padding-top: rem(50)
+    padding-bottom: rem(50)
+
   + aside
     padding: 0 rem(50)
 
     +mq(minXsmall)
       +mixin(widthSettings)
       padding-bottom: rem(100)
-
-  +mq(minXsmall)
-    padding-top: rem(50)
-    padding-bottom: rem(50)
 
   h1
     font-weight: 900
@@ -74,6 +74,18 @@
       border-top: 0
       padding-top: 0
 
+  figure
+    margin: rem(20) 0
+    text-align: center
+
+    img
+      max-width: 100%
+
+    figcaption
+      margin-top: rem(5)
+      font-size: rem(14)
+      color: $color-mint
+
   strong
     &:not(.articleFIN)
       font-weight: 700
@@ -84,9 +96,13 @@
       margin-top: rem(50)
       font-weight: 900
       font-size: rem(28)
-      text-align: right
+      text-align: center
       color: $color-yellow
 
-  code
+  p > code
+    display: inline-block
+    background-color: rgba($color-light, .1)
+    border-radius: rem(2)
+    padding: 0 rem(5)
     font-family: 'fira-code', Courier, monospace
-    color: rgba(#fff, .1)
+    color: $color-light

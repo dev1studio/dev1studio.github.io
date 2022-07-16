@@ -9,16 +9,32 @@ deckDeckGoHighlightElement();
 
 ## Prologue
 
----
+마크업(Mark-up; HTML)을 Styling하는 가장 고전적이고 흔히 사용하는 방법이 CSS 입니다.
 
-## CSS-in-JS
+`CSS`는 3가지 방법으로 작성할 수 있습니다.
 
-CSS-in-JS는 JavaScript 언어로 CSS를 코딩하는 것을 말합니다.
+`style` 태그를 사용하는 방법, 태그(Element) 안에 `style` 속성(Property)을 사용하는 방법, 마지막으로 `.css` 확장자를 사용하는 파일을 사용해 작성하는 방법.
+
+CSS의 단점은 Class 이름이 중복되게 네이밍을 지을 위험성이 있고 JavaScript와 연동이 어렵다는 점입니다.
+
+`CSS-in-JS`는 JavaScript 언어로 CSS를 코딩하는 것을 말합니다.
 
 > “CSS-in-JS”는 외부의 파일에 CSS를 정의하는 대신에 JavaScript와 결합하는 패턴을 의미합니다.
 >
 > ( 출처: reactjs.org )
 
+CSS Pre-processor 즉, CSS 전처리기 종류에는 `Scss`(SCSS/SASS), `Stylus` 등이 있는데 가장 많이 사용되고 있는 것은 SCSS 이며 그 뒤를 SASS, Stylus가 따라가고 있습니다. (한국 기준이며, 해외에서는 Stylus가 많이 쓰임)
+
+CSS-in-JS를 사용하거나 CSS 전처리기 및 CSS의 Module형으로 사용시 CSS의 단점들을 보완할 수 있습니다.
+
+<figure>
+  <img src='/20211012/followme.jpeg' alt='' />
+  <figcaption>따라와~ 왜 안와~</figcaption>
+</figure>
+
+---
+
+## CSS-in-JS
 
 ```jsx
 const Name = styled.cite({
@@ -57,8 +73,6 @@ export default App
 emotion은 애초에 JavaScript 문법을 따르기 때문에 style의 property, value에 문법 오류가 발생하면 자동으로 체크합니다.
 
 ## CSS Pre-processor
-
-CSS Pre-processor 즉, CSS 전처리기 종류에는 Scss(SCSS/SASS), Stylus 등이 있는데 가장 많이 사용되고 있는 것은 SCSS 이며 그 뒤를 SASS, Stylus가 따라가고 있습니다(한국기준. 해외에서는 Stylus가 많이 쓰임).
 
 SCSS는 문법이 기존 CSS와 매우 유사합니다. SASS는 끝의 ';'(세미콜론) 그리고 '{', '}'(중괄호)로 감싸는 것이 생략된 버전이고 Stylus는 여기서 property와 value 사이의 ':'(콜론) 까지 생략된 버전입니다. 셀렉터와 셀렉터 사이의 ','(콤마) 까지도 생략 가능하죠. (단, 줄바꿈 시에만)
 
@@ -113,6 +127,11 @@ i { font-style: normal }
 ```
 
 이렇게 컴파일 됩니다.
+
+<figure>
+  <img src='/20211012/losse.jpeg' alt='' />
+  <figcaption>너무 길어서 근손실 올 기세</figcaption>
+</figure>
 
 ---
 
