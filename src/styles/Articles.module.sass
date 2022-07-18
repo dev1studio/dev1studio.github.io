@@ -1,11 +1,11 @@
 @import '../styles/designSystem.sass'
 
 .articlePage
-  padding: rem(25)
+  padding-top: rem(25)
+  padding-bottom: rem(50)
 
   +mq(minXsmall)
     padding-top: rem(50)
-    padding-bottom: rem(50)
 
   + aside
     padding: 0 rem(50)
@@ -25,13 +25,20 @@
   small
     opacity: .7
     font-weight: 700
-    font-size: rem(22)
+    font-size: rem(16)
+
+    +mq(minXsmall)
+      font-size: rem(22)
 
   time
     display: block
     opacity: .7
-    margin: rem(20) 0 rem(70)
-    font-size: rem(14)
+    margin: rem(10) 0 rem(25)
+    font-size: rem(12)
+
+    +mq(minXsmall)
+      margin: rem(20) 0 rem(70)
+      font-size: rem(14)
 
     + img
       width: 100%
@@ -41,42 +48,62 @@
         border-top: 0
 
   p
-    margin: rem(16) 0
-    font-size: rem(18)
+    margin: rem(14) 0
+    font-size: rem(16)
     line-height: 1.7
+
+    +mq(minXsmall)
+      margin: rem(16) 0
+      font-size: rem(18)
 
   blockquote
     background-color: rgba($color-light, .1)
-    margin: rem(20) 0
+    margin: rem(15) 0
     border-left: rem(5) solid $color-yellow
-    padding: rem(15)
+    padding: rem(10)
+
+    +mq(minXsmall)
+      margin: rem(20) 0
+      padding: rem(15)
 
     p
-      margin: rem(8) 0
-      font-size: rem(16)
+      margin: rem(6) 0
+      font-size: rem(14)
       line-height: 1.5
 
+      +mq(minXsmall)
+        margin: rem(8) 0
+        font-size: rem(16)
+
   h2
-    margin: rem(50) 0
-    padding-top: rem(50)
+    margin: rem(25) 0
+    padding-top: rem(25)
     border-top: rem(2) solid rgba($color-light, .1)
     font-weight: 700
     font-size: rem(22)
 
     +mq(minXsmall)
+      margin: rem(50) 0
+      padding-top: rem(50)
       font-size: rem(32)
 
   hr
-    margin: rem(50) 0
+    margin: rem(25) 0
     border: rem(1) solid rgba($color-yellow, .5)
+
+    +mq(minXsmall)
+      margin: rem(50) 0
 
     + h2
       border-top: 0
       padding-top: 0
 
   figure
-    margin: rem(20) 0
+    margin: rem(15) 0
     text-align: center
+
+    +mq(minXsmall)
+      margin: rem(20) 0
 
     img
       max-width: 100%
@@ -86,6 +113,9 @@
       font-size: rem(14)
       color: $color-mint
 
+      +mq(minXsmall)
+        font-size: rem(12)
+
   strong
     &:not(.articleFIN)
       font-weight: 700
@@ -93,11 +123,15 @@
 
     &.articleFIN
       display: block
-      margin-top: rem(50)
+      margin-top: rem(20)
       font-weight: 900
-      font-size: rem(28)
+      font-size: rem(22)
       text-align: center
       color: $color-yellow
+
+      +mq(minXsmall)
+        margin-top: rem(50)
+        font-size: rem(28)
 
   p > code
     display: inline-block
