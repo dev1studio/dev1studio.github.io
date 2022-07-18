@@ -11,7 +11,6 @@
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -36,7 +35,6 @@ Temporary Items
 *.icloud
 
 ### Node ###
-# Logs
 logs
 *.log
 npm-debug.log*
@@ -60,6 +58,7 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 *.lcov
+junit.xml
 
 # nyc test coverage
 .nyc_output
@@ -79,6 +78,10 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+integration-tests/gatsby-cli/execution-folder/*
+*.un~
+dist
+bin/published.js
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -116,6 +119,7 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+scripts/.env
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -133,7 +137,7 @@ dist
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
-# public
+public/
 
 # vuepress build output
 .vuepress/dist
@@ -180,12 +184,21 @@ dist
 **/*.backup.*
 **/*.back.*
 
-node_modules
+node_modules/
 
 *.sublime*
 
 psd
 thumb
 sketch
+
+# Build Path of Test Fixtures
+test/**/public
+.gatsby-context.js
+e2e-tests/gatsby-pnp/
+__diff_output__/
+.cache/
+.netlify
+.Rhistory
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,react,node
