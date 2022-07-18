@@ -7,8 +7,11 @@ $thumbnail-horizontal: 1200
   overflow: hidden
 
   nav
-    margin-top: rem(100)
+    margin-top: rem(50)
     text-align: center
+
+    +mq(minXsmall)
+      margin-top: rem(100)
 
     li
       display: inline-flex
@@ -23,25 +26,38 @@ $thumbnail-horizontal: 1200
 
       a
         border: rem(2) solid $color-yellow
-        padding: rem(15) rem(50)
+        padding: rem(10) rem(30)
+
+        +mq(maxTablet)
+          font-size: rem(12)
+
+        +mq(minXsmall)
+          padding: rem(15) rem(50)
 
   h2
-    margin-top: rem(75)
+    margin-top: rem(25)
     font-weight: 700
-    font-size: rem(28)
+    font-size: rem(20)
     color: $color-yellow
 
+    +mq(minXsmall)
+      margin-top: rem(75)
+      font-size: rem(28)
+
     + ul
-      padding-top: rem(50)
+      padding-top: rem(25)
+
+      +mq(minXsmall)
+        padding-top: rem(50)
 
   > ul
     display: flex
     flex-wrap: wrap
     margin: 0 rem(-15)
-    padding-top: rem(75)
+    padding-top: rem(25)
 
-    +mq(maxTablet)
-      padding-top: rem(25)
+    +mq(minXsmall)
+      padding-top: rem(75)
 
     li
       padding: 0 rem(15)
@@ -83,19 +99,32 @@ $thumbnail-horizontal: 1200
 
         strong
           +mixin(ellipsis)
-          margin: rem(15) 0
-          font-size: rem(18)
+          margin: rem(10) 0
+          font-size: rem(16)
           font-weight: 700
 
+          +mq(minXsmall)
+            margin: rem(15) 0
+            font-size: rem(18)
+
         p
-          +clamp(3, 57, 1.35)
+          +clamp(3, 48, 1.35)
           margin-bottom: rem(15)
           max-height: none
-          height: rem(57)
-          font-size: rem(14)
+          height: rem(48)
+          font-size: rem(12)
           font-weight: 400
           opacity: .7
 
+          +mq(minXsmall)
+            +clamp(3, 56, 1.35)
+            margin-bottom: rem(15)
+            height: rem(56)
+            font-size: rem(14)
+
         time
-          font-size: rem(12)
+          font-size: rem(10)
           opacity: .5
+
+          +mq(minXsmall)
+            font-size: rem(12)
