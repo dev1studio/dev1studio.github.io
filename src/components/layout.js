@@ -1,7 +1,7 @@
 import React from "react"
 import styled from '@emotion/styled'
 import LinkButton from './utilities/linkButton'
-import { colors, fontWeights, Rem } from '../styles/designSystem'
+import { colors, fontWeights, mq, Rem } from '../styles/designSystem'
 
 const Contents = styled.div({
   width: '100%',
@@ -67,12 +67,20 @@ const Nav = styled.nav({
 
 const Footer = styled.footer({
   display: 'flex',
-  justifyContent: 'space-between',
   padding: Rem(25),
   width: '100%',
+  [mq.maxTablet]: {
+    flexDirection: 'column-reverse',
+  },
+  [mq.minXsmall]: {
+    justifyContent: 'space-between',
+  },
   '& p': {
     fontFamily: "'Gowun Batang', sans-serif",
-    fontSize: Rem(16),
+    fontSize: Rem(12),
+    [mq.minXsmall]: {
+      fontSize: Rem(16),
+    },
     '& span': {
       color: colors.yellow,
     },
@@ -81,8 +89,15 @@ const Footer = styled.footer({
 
 const SiteLink = styled.ul({
   display: 'flex',
-  justifyContent: 'flex-end',
-  marginRight: Rem(-10),
+  opacity: .5,
+  [mq.maxTablet]: {
+    marginBottom: Rem(25),
+    marginLeft: Rem(-10),
+  },
+  [mq.minXsmall]: {
+    justifyContent: 'flex-end',
+    marginRight: Rem(-10),
+  },
   '& li': {
     paddingRight: Rem(10),
     paddingLeft: Rem(10),
