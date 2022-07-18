@@ -16,6 +16,7 @@
     "deploy": "gatsby build && gh-pages -d public -b deploy"
   },
   "dependencies": {
+    "@bradgarropy/gatsby-plugin-seo": "^2.2.0",
     "@deckdeckgo/highlight-code": "^3.6.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",

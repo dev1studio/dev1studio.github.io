@@ -1,12 +1,18 @@
 import * as React from "react"
-import SEO from '../components/utilities/withHead'
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Bio.module.sass'
 
 const BioPage = () => (
   <Container>
     <SEO
-      title="Bio"
+      title='Bio'
+      description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
+      facebook={{
+        image: 'https://dev1stud.io/misc/open-graph.png',
+        url: 'https://dev1stud.io/bio',
+        type: 'website',
+      }}
     />
     <main className={styles['bioPage']}>
       <h1>💃 O612 BIO</h1>

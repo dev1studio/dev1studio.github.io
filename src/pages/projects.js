@@ -1,12 +1,18 @@
 import * as React from "react"
-import SEO from '../components/utilities/withHead'
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Projects.module.sass'
 
 const ProjectsPage = () => (
   <Container>
     <SEO
-      title="Projects"
+      title='Projects'
+      description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
+      facebook={{
+        image: 'https://dev1stud.io/misc/open-graph.png',
+        url: 'https://dev1stud.io/projects',
+        type: 'website',
+      }}
     />
     <main className={styles['projPage']}>
       <h1>🏗 Projects</h1>

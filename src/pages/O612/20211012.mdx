@@ -1,4 +1,4 @@
-import SEO from '../../components/utilities/withHead'
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Container from '../../components/layout'
 import * as styles from '../../styles/Articles.module.sass'
 import Article20211012 from './article20211012'
@@ -8,6 +8,11 @@ import Profile from '../../components/pages/profile.js'
   <SEO
     title="CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교"
     description="emotion, styled-components 그리고 Sass, CSS의 비교"
+    facebook={{
+      image: 'https://dev1stud.io/20211012/losse.jpeg',
+      url: 'https://dev1stud.io/O612/20211012',
+      type: 'website',
+    }}
   />
   <article className={styles['articlePage']}>
     <Article20211012 />

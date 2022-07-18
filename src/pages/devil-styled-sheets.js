@@ -1,6 +1,6 @@
 import * as React from "react"
 import posts from '../apis/posts'
-import SEO from '../components/utilities/withHead'
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
@@ -11,7 +11,13 @@ function DevilStyledSheetsPage() {
   return (
     <Container>
       <SEO
-        title="Home"
+        title='Devil Styled Sheets'
+        description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
+        facebook={{
+          image: 'https://dev1stud.io/misc/open-graph.png',
+          url: 'https://dev1stud.io/devil-styled-sheets',
+          type: 'website',
+        }}
       />
       <main className={styles['mainPage']}>
         <Profile />

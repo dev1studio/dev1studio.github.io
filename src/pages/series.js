@@ -1,17 +1,23 @@
 import * as React from "react"
 import series from '../apis/series'
-import SEO from '../components/utilities/withHead'
+import SEO from "@bradgarropy/gatsby-plugin-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
 import LinkButton from '../components/utilities/linkButton'
 import Route from '../components/pages/route'
 
-function IndexPage() {
+function SeriesPage() {
   return (
     <Container>
       <SEO
-        title="Series"
+        title='Series'
+        description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
+        facebook={{
+          image: 'https://dev1stud.io/misc/open-graph.png',
+          url: 'https://dev1stud.io/series',
+          type: 'website',
+        }}
       />
       <main className={styles['mainPage']}>
         <Profile />
@@ -36,4 +42,4 @@ function IndexPage() {
   )
 }
 
-export default IndexPage
+export default SeriesPage
