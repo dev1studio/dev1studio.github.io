@@ -1,6 +1,6 @@
 import * as React from "react"
 import posts from '../apis/posts'
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import GatsbySeo from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
@@ -10,13 +10,16 @@ import Route from '../components/pages/route'
 function DevilStyledSheetsPage() {
   return (
     <Container>
-      <SEO
-        title='Devil Styled Sheets'
+      <GatsbySeo
+        title='Series - Deveil Styled Sheets | O612 DEV1L.studio'
         description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
-        facebook={{
-          image: 'https://dev1stud.io/misc/open-graph.png',
+        canonical='https://dev1stud.io/devil-styled-sheets'
+        openGraph={{
+          type: 'site',
+          title: 'O612 DEV1L.studio',
+          description: 'Series - Deveil Styled Sheets',
           url: 'https://dev1stud.io/devil-styled-sheets',
-          type: 'website',
+          images: [{ url: 'https://dev1stud.io/misc/open-graph-home.png' }],
         }}
       />
       <main className={styles['mainPage']}>

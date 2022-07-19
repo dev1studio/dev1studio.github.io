@@ -1,6 +1,6 @@
 import * as React from "react"
 import series from '../apis/series'
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import GatsbySeo from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
@@ -10,13 +10,16 @@ import Route from '../components/pages/route'
 function SeriesPage() {
   return (
     <Container>
-      <SEO
-        title='Series'
+      <GatsbySeo
+        title='Series | O612 DEV1L.studio'
         description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
-        facebook={{
-          image: 'https://dev1stud.io/misc/open-graph.png',
+        canonical='https://dev1stud.io/'
+        openGraph={{
+          type: 'site',
+          title: 'O612 DEV1L.studio',
+          description: 'Home - Series',
           url: 'https://dev1stud.io/series',
-          type: 'website',
+          images: [{ url: 'https://dev1stud.io/misc/open-graph-home.png' }],
         }}
       />
       <main className={styles['mainPage']}>

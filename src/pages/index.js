@@ -1,6 +1,6 @@
 import * as React from "react"
 import posts from '../apis/posts'
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
@@ -10,18 +10,21 @@ import Route from '../components/pages/route'
 function IndexPage() {
   return (
     <Container>
-      <SEO
-        title='Home'
+      <GatsbySeo
+        title='Home | O612 DEV1L.studio'
         description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
-        facebook={{
-          image: 'https://dev1stud.io/misc/open-graph.png',
+        canonical='https://dev1stud.io/'
+        openGraph={{
+          type: 'site',
+          title: 'O612 DEV1L.studio',
+          description: 'Home',
           url: 'https://dev1stud.io/',
-          type: 'website',
+          images: [{ url: 'https://dev1stud.io/misc/open-graph-home.png' }],
         }}
       />
       <main className={styles['mainPage']}>
         <Profile />
-        <Route route='home' />
+        <Route route={'home'} />
         <ul>
           {posts.map(post => (
             <li key={post.id}>
@@ -29,7 +32,7 @@ function IndexPage() {
                 <div className={styles['listThumbnail']}>
                   <i style={{ backgroundImage: `url(${post.thumbnail}` }} />
                   {post.badge && (
-                    <span aria-label="New Badge">새글</span>
+                    <span>새글</span>
                   )}
                 </div>
                 <strong>{post.subject}</strong>

@@ -1,17 +1,20 @@
 import * as React from "react"
-import SEO from "@bradgarropy/gatsby-plugin-seo"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Bio.module.sass'
 
 const BioPage = () => (
   <Container>
-    <SEO
-      title='Bio'
+    <GatsbySeo
+      title='Bio | O612 DEV1L.studio'
       description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
-      facebook={{
-        image: 'https://dev1stud.io/misc/open-graph.png',
+      canonical='https://dev1stud.io/bio'
+      openGraph={{
+        type: 'article',
+        title: 'O612 DEV1L.studio',
+        description: 'CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교',
         url: 'https://dev1stud.io/bio',
-        type: 'website',
+        images: [{ url: 'https://dev1stud.io/misc/open-graph-bio.png' }],
       }}
     />
     <main className={styles['bioPage']}>

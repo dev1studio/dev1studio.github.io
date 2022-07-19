@@ -13,17 +13,23 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: 'gatsby-plugin-next-seo',
+      options: {
+        openGraph: {
+          site_name: 'DEV1L.studio',
+        },
+        twitter: {
+          handle: '@O612',
+          site: '@DEV1L.studio',
+          cardType: 'summary_large_image',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         "icon": "src/images/icon.png"
       }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/O612/`,
-      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
