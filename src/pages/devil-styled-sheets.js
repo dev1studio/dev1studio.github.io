@@ -1,6 +1,6 @@
 import * as React from "react"
 import posts from '../apis/posts'
-import GatsbySeo from "gatsby-plugin-next-seo"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
