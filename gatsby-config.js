@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `DEV1L.studio`,
-    siteUrl: `https://dev1stud.io/`,
+    siteUrl: `https://dev1stud.io`,
     author: `@O612`,
     description: `O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오`,
   },
@@ -11,6 +11,7 @@ module.exports = {
     "gatsby-plugin-react-helmet-async",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-advanced-sitemap",
     "gatsby-transformer-sharp",
     {
       resolve: 'gatsby-plugin-next-seo',
