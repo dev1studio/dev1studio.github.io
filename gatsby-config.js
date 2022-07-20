@@ -42,5 +42,11 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `dev1l-studio`
+      }
+    },
   ],
 };
