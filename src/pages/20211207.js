@@ -5,6 +5,7 @@ import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
 import Article from '../contents/20211207'
 import Profile from '../components/pages/profile.js'
+import Pager from '../components/pages/pager'
 
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
@@ -32,6 +33,10 @@ function ArticlePage() {
         <strong className={styles['articleFIN']}>FIN!</strong>
       </article>
       <aside><Profile /></aside>
+      <Pager
+        previousAddress={`/20211201`}
+        previousTitle={'CSS와 Module CSS 비교'}
+      />
       <Disqus
         config={{
           url: pageAddress,

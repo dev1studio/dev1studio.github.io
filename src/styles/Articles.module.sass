@@ -147,3 +147,63 @@
     padding: 0 rem(5)
     font-family: 'fira-code', Courier, monospace
     color: $color-light
+
+.pagerContainer
+  display: flex
+  padding: 0 rem(25) rem(50)
+
+  +mq(maxTablet)
+    flex-direction: column
+
+  +mq(minXsmall)
+    +mixin(widthSettings)
+    justify-content: space-between
+    padding-bottom: rem(100)
+
+  li
+    +mq(minXsmall)
+      width: 37%
+
+    &.pagerNext a
+      flex-direction: row-reverse
+
+      +mq(maxTablet)
+        margin-top: rem(25)
+
+      dl
+        text-align: right
+
+        dt
+          flex-direction: row-reverse
+
+  a
+    display: flex
+    border: rem(2) solid $color-mint
+    border-radius: rem(5)
+    padding: rem(20)
+    color: $color-light
+
+    +mq(minXsmall)
+      padding-bottom: 0
+      height: rem(135)
+
+    dl
+      display: flex
+      flex-direction: column
+
+      dt
+        display: flex
+        align-items: center
+        margin-bottom: rem(10)
+        font-size: rem(14)
+        opacity: .7
+
+        &::before
+          content: ''
+          display: block
+          width: rem(20)
+          height: rem(20)
+
+      dd
+        font-weight: 700
+        font-size: rem(16)

@@ -5,6 +5,7 @@ import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
 import Article from '../contents/20211201'
 import Profile from '../components/pages/profile.js'
+import Pager from '../components/pages/pager'
 
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
@@ -32,6 +33,12 @@ function ArticlePage() {
         <strong className={styles['articleFIN']}>FIN!</strong>
       </article>
       <aside><Profile /></aside>
+      <Pager
+        previousAddress={`/20211012`}
+        previousTitle={'CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교'}
+        nextAddress={`/20211207`}
+        nextTitle={'emotion vs. Sass 승자는?!..'}
+      />
       <Disqus
         config={{
           url: pageAddress,
