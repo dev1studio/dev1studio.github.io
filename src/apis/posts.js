@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
-    thumbnail: "/20211207/summary.png",
+    thumbnail: "/20211207/summary",
     subject: "emotion vs. Sass 승자는?!..",
     category: "Devil Styled Sheets",
     url: "/20211207",
@@ -13,7 +13,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211201/summary.png",
+    thumbnail: "/20211201/summary",
     subject: "CSS와 Module CSS 비교",
     category: "Devil Styled Sheets",
     url: "/20211201",
@@ -23,7 +23,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211012/summary.png",
+    thumbnail: "/20211012/summary",
     subject: "CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교",
     category: "Devil Styled Sheets",
     url: "/20211012",

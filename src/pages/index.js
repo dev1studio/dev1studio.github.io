@@ -1,4 +1,6 @@
 import * as React from "react"
+import { v4 as uuidv4 } from 'uuid'
+import styled from '@emotion/styled'
 import posts from '../apis/posts'
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
@@ -6,6 +8,8 @@ import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
 import LinkButton from '../components/utilities/linkButton'
 import Route from '../components/pages/route'
+
+const Img = styled.img()
 
 function IndexPage() {
   return (
@@ -30,7 +34,10 @@ function IndexPage() {
             <li key={post.id}>
               <LinkButton href={post.url}>
                 <div className={styles['listThumbnail']}>
-                  <i style={{ backgroundImage: `url(${post.thumbnail}` }} />
+                  <picture>
+                    <source srcSet={`${post.thumbnail}.webp?${uuidv4()}`} type="image/webp" />
+                    <Img src={`${post.thumbnail}.png?${uuidv4()}`} alt="" width="1200" height="630" />
+                  </picture>
                   {post.badge && (
                     <span>새글</span>
                   )}

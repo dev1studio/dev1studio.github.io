@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import "@deckdeckgo/highlight-code";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
@@ -6,7 +7,10 @@ deckDeckGoHighlightElement();
 
 <small>부제: 재귀적 inherit의 굴레</small>
 <time>2021.12.01</time>
-<img src='/20211201/summary.png' alt='' />
+<picture>
+  <source srcSet={`/20211201/summary.webp?${uuidv4()}`} type="image/webp" />
+  <img src={`/20211201/summary.png?${uuidv4()}`} alt='' />
+</picture>
 
 ## Prologue
 
@@ -57,7 +61,10 @@ Sass.
 하지만 페이지마다 .container가 있고 h1이 있지만 모두 스타일이 다르다면? 머리에 쥐가나고 없던 두통이 오는 느낌적 느낌이 듭니다.
 
 <figure>
-  <img src='/20211201/headattact.jpg' alt='' />
+  <picture>
+    <source srcSet={`/20211201/headattact.webp?${uuidv4()}`} type="image/webp" />
+    <img src={`/20211201/headattact.jpeg?${uuidv4()}`} alt='' />
+  </picture>
   <figcaption>머리가 아파오는군</figcaption>
 </figure>
 

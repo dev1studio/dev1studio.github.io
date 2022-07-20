@@ -127,6 +127,11 @@ $color-background: #212121
     height: auto
     clip: auto
 
+  @if $style == imageRendering
+    image-rendering: -webkit-optimize-contrast
+    transform: translateZ(0)
+    backface-visibility: hidden
+
 =clamp($line, $maxheight, $lineheight)
   overflow: hidden
   text-overflow: ellipsis

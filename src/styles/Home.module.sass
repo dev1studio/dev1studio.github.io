@@ -73,7 +73,7 @@ $thumbnail-horizontal: 1200
           padding-bottom: rem(50)
 
         &:hover, &:focus
-          i
+          img
             transform: scale(1.1)
 
           strong
@@ -81,12 +81,16 @@ $thumbnail-horizontal: 1200
 
         .listThumbnail
           position: relative
-          border-radius: rem(5)
           overflow: hidden
 
-          i
+          picture
+            width: 100%
+
+          img
             +not-supports-aspect-ratio-box($thumbnail-horizontal, $thumbnail-vertical)
-            background: no-repeat 50% 50%/cover
+            image-rendering: -webkit-optimize-contrast
+            backface-visibility: hidden
+            object-fit: cover
             transition: .15s linear
 
           span

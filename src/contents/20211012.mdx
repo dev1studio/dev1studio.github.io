@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import "@deckdeckgo/highlight-code";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
@@ -6,7 +7,10 @@ deckDeckGoHighlightElement();
 
 <small>emotion, styled-components 그리고 Sass, CSS의 비교</small>
 <time>2021.10.12</time>
-<img src='/20211012/summary.png' alt='' />
+<picture>
+  <source srcSet={`/20211012/summary.webp?${uuidv4()}`} type="image/webp" />
+  <img src={`/20211012/summary.png?${uuidv4()}`} alt='' />
+</picture>
 
 ## Prologue
 
@@ -29,7 +33,10 @@ CSS Pre-processor 즉, CSS 전처리기 종류에는 `Scss`(SCSS/SASS), `Stylus`
 CSS-in-JS를 사용하거나 CSS 전처리기 및 CSS의 Module형으로 사용시 CSS의 단점들을 보완할 수 있습니다.
 
 <figure>
-  <img src='/20211012/followme.jpeg' alt='' />
+  <picture>
+    <source srcSet={`/20211012/followme.webp?${uuidv4()}`} type="image/webp" />
+    <img src={`/20211012/followme.jpeg?${uuidv4()}`} alt='' />
+  </picture>
   <figcaption>따라와~ 왜 안와~</figcaption>
 </figure>
 
@@ -130,7 +137,10 @@ i { font-style: normal }
 이렇게 컴파일 됩니다.
 
 <figure>
-  <img src='/20211012/losse.jpeg' alt='' />
+  <picture>
+    <source srcSet={`/20211012/losse.webp?${uuidv4()}`} type="image/webp" />
+    <img src={`/20211012/losse.jpeg?${uuidv4()}`} alt='' />
+  </picture>
   <figcaption>너무 길어서 근손실 올 기세</figcaption>
 </figure>
 

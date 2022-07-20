@@ -16,7 +16,7 @@ const ArticlePage = () => (
         title: 'O612 DEV1L.studio',
         description: 'emotion vs. Sass 승자는?!..',
         url: 'https://dev1stud.io/20211207',
-        images: [{ url: 'https://dev1stud.io/20211207/losse.jpeg' }],
+        images: [{ url: 'https://dev1stud.io/20211207/cat.jpg' }],
       }}
     />
     <article className={styles['articlePage']}>

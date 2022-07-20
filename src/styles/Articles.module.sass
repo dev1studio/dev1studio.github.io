@@ -87,6 +87,13 @@
       padding-top: rem(50)
       font-size: rem(32)
 
+  picture
+    width: 100%
+
+  img
+    +mixin(imageRendering)
+    max-width: 100%
+
   hr
     margin: rem(25) 0
     border: rem(1) solid rgba($color-yellow, .5)

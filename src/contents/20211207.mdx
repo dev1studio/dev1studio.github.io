@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import "@deckdeckgo/highlight-code";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
@@ -6,7 +7,10 @@ deckDeckGoHighlightElement();
 
 <small>이기는 놈이 내 편</small>
 <time>2021.12.07</time>
-<img src='/20211207/summary.png' alt='' />
+<picture>
+  <source srcSet={`/20211207/summary.webp?${uuidv4()}`} type="image/webp" />
+  <img src={`/20211207/summary.png?${uuidv4()}`} alt='' />
+</picture>
 
 ## Prologue
 
@@ -74,7 +78,10 @@ Sass는 `/src/assets/index.js`를 불러올 수 없습니다.
 Sass인 경우 `/public`에 존재하는 이미지만 불러올 수 있기 때문에 이미지가 수정되었을 때 인지하지 못하는 문제가 생길 수 있습니다.
 
 <figure>
-  <img src='/20211207/emotion-win.jpg' alt='' />
+  <picture>
+    <source srcSet={`/20211207/emotion-win.webp?${uuidv4()}`} type="image/webp" />
+    <img src={`/20211207/emotion-win.jpeg?${uuidv4()}`} alt='' />
+  </picture>
   <figcaption>이모션이 이겨따ㅏㅏㅏ</figcaption>
 </figure>
 
@@ -87,14 +94,20 @@ emotion styled는 1단계 상속이고, CSS는 선택자에 따라 레벨 상속
 그래서 Class 상속을 받은 상태라면 CSS에서 적용한 코드가 emotion styled로 작성한 코드보다 우선 적용되어 emotion styled로 작성한 코드는 취소 됩니다.
 
 <figure>
-  <img src='/20211207/css-win.jpg' alt='' />
+  <picture>
+    <source srcSet={`/20211207/css-win.webp?${uuidv4()}`} type="image/webp" />
+    <img src={`/20211207/css-win.jpeg?${uuidv4()}`} alt='' />
+  </picture>
   <figcaption>싸쓰가 이겨따데스!!!</figcaption>
 </figure>
 
 ## 그래서 뭐가 좋다는 거야?!
 
 <figure>
-  <img src='/20211207/cat.jpg' alt='' />
+  <picture>
+    <source srcSet={`/20211207/cat.webp?${uuidv4()}`} type="image/webp" />
+    <img src={`/20211207/cat.jpeg?${uuidv4()}`} alt='' />
+  </picture>
   <figcaption>아직 한 발 남았단다 나의 고양이</figcaption>
 </figure>
 
@@ -108,4 +121,4 @@ emotion styled는 jsx에 직접 작성하는 코드라서 styled 안의 코드�
 
 이번 글은 Class 상속 개념을 이미 알고 있지 않다면 이해하기 힘든 글입니다. 상속 개념에 대해서는 기회가 된다면 언젠가 다뤄보겠습니다.
 
-그럼 다음 글에서 만나요! 다음 편 **관많부!** : )
+그럼 다음 글에서 만나요! 다음 글 **관많부!** : )
