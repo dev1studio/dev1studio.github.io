@@ -2,6 +2,7 @@ import * as React from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Bio.module.sass'
+import PostComment from '../components/utilities/utterances'
 
 const BioPage = () => (
   <Container>
@@ -36,7 +37,7 @@ const BioPage = () => (
             <li>2009년 첫 정규직 스타트업 입사</li>
             <li>2010년 모바일웹 퍼블리싱 시작</li>
             <li>2012년 웹기획 시작</li>
-            <li>2022년 대전에 본사를 둔 스타트업 재직 중</li>
+            <li>2022년 지하수에 진심인 ‘샘물터’ 재직 중</li>
           </ul>
         </div>
         <div className={styles['col']}>
@@ -53,6 +54,7 @@ const BioPage = () => (
         </div>
       </div>
     </main>
+    <PostComment />
   </Container>
 )
 

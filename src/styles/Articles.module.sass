@@ -150,7 +150,8 @@
 
 .pagerContainer
   display: flex
-  padding: 0 rem(25) rem(50)
+  padding: 0 rem(25)
+  margin-bottom: rem(50)
 
   +mq(maxTablet)
     flex-direction: column
@@ -158,7 +159,7 @@
   +mq(minXsmall)
     +mixin(widthSettings)
     justify-content: space-between
-    padding-bottom: rem(100)
+    margin-bottom: rem(50)
 
   li
     +mq(minXsmall)

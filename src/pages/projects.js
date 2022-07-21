@@ -2,6 +2,7 @@ import * as React from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Projects.module.sass'
+import PostComment from '../components/utilities/utterances'
 
 const ProjectsPage = () => (
   <Container>
@@ -35,7 +36,7 @@ const ProjectsPage = () => (
             <li>2016년 ㄷ 쇼핑몰 이벤트 운영/유지보수</li>
             <li>2017년 ㅍ 사단법인 웹사이트</li>
             <li>2020년 ㄹ 법무법인 웹사이트</li>
-            <li>2022년 ㅅ 스타트업 웹사이트</li>
+            <li>2022년 ‘주식회사 샘물터’ 웹사이트</li>
           </ul>
         </div>
         <div className={styles['col']}>
@@ -51,7 +52,7 @@ const ProjectsPage = () => (
             <li>2017년 ㅅ 쇼핑몰 웹사이트</li>
             <li>2019~2020 ㅁ 서비스 웹사이트</li>
             <li>2021년 ㅈ 서비스 랜딩페이지</li>
-            <li>2022년 ㅅ 스타트업 웹사이트</li>
+            <li>2022년 ‘주식회사 샘물터’ 웹사이트</li>
           </ul>
         </div>
         <div className={styles['col']}>
@@ -59,7 +60,7 @@ const ProjectsPage = () => (
           <ul>
             <li>2012년 ㅎ 서비스 웹사이트</li>
             <li>2019~2020년 ㅁ 서비스 웹사이트</li>
-            <li>2022년 ㅅ 스타트업 웹사이트</li>
+            <li>2022년 ‘주식회사 샘물터’ 웹사이트</li>
           </ul>
         </div>
         <div className={styles['col']}>
@@ -72,6 +73,7 @@ const ProjectsPage = () => (
         </div>
       </div>
     </main>
+    <PostComment />
   </Container>
 )
 

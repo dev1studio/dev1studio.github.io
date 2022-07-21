@@ -1,11 +1,12 @@
 import * as React from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
-import { Disqus } from 'gatsby-plugin-disqus'
+// import { Disqus } from 'gatsby-plugin-disqus'
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
 import Article from '../contents/20211012'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
+import PostComment from '../components/utilities/utterances'
 
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
@@ -42,13 +43,14 @@ function ArticlePage() {
         nextAddress={`/20211201`}
         nextTitle={'CSS와 Module CSS 비교'}
       />
-      <Disqus
+      {/* <Disqus
         config={{
           url: pageAddress,
           identifier: pageIdentifier,
           title: pageTitle,
         }}
-      />
+      /> */}
+      <PostComment />
     </Container>
   )
 }
