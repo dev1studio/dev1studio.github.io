@@ -5,6 +5,7 @@ import LinkButton from '../utilities/linkButton'
 
 const ActiveButton = styled(LinkButton)(({ $current }) => ({
   backgroundColor: $current ? colors.yellow : null,
+  fontWeight: $current ? 700 : 400,
   color: $current ? colors.dark : colors.light,
 }))
 

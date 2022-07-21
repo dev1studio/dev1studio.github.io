@@ -11,14 +11,16 @@ function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
   const pageTitle = 'emotion vs. Sass 승자는?!..'
-  const pageIdentifier = '20211207'
+  const pageDateTime = '2021.12.07'
+  const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
+  const subTitle = '이기는 놈이 내 편'
 
   return (
     <Container>
       <GatsbySeo
         title={`${pageTitle} | ${siteTitle}`}
-        description='이기는 놈이 내 편'
+        description={subTitle}
         canonical={pageAddress}
         openGraph={{
           type: 'article',
@@ -29,6 +31,9 @@ function ArticlePage() {
         }}
       />
       <article className={styles['articlePage']}>
+        <h1>{pageTitle}</h1>
+        <small>{subTitle}</small>
+        <time>{pageDateTime}</time>
         <Article />
         <strong className={styles['articleFIN']}>FIN!</strong>
       </article>

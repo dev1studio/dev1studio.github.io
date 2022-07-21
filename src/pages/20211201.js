@@ -11,14 +11,16 @@ function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
   const pageTitle = 'CSS와 Module CSS 비교'
-  const pageIdentifier = '20211201'
+  const pageDateTime = '2021.12.01'
+  const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
+  const subTitle = '부제: 재귀적 inherit의 굴레'
 
   return (
     <Container>
       <GatsbySeo
         title={`${pageTitle} | ${siteTitle}`}
-        description='부제: 재귀적 inherit의 굴레'
+        description={subTitle}
         canonical={pageAddress}
         openGraph={{
           type: 'article',
@@ -29,6 +31,9 @@ function ArticlePage() {
         }}
       />
       <article className={styles['articlePage']}>
+        <h1>{pageTitle}</h1>
+        <small>{subTitle}</small>
+        <time>{pageDateTime}</time>
         <Article />
         <strong className={styles['articleFIN']}>FIN!</strong>
       </article>
