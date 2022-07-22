@@ -11,7 +11,7 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = '멀티버스 프레임워크! Meta React & React Native'
+  const pageTitle = '메타버스 프레임워크! Meta React & React Native'
   const pageDateTime = '2021.10.15'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier

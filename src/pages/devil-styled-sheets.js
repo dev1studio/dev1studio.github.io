@@ -23,7 +23,7 @@ function DevilStyledSheetsPage() {
           title: 'O612 DEV1L.studio',
           description: 'Series - Deveil Styled Sheets',
           url: 'https://dev1stud.io/devil-styled-sheets',
-          images: [{ url: 'https://dev1stud.io/misc/open-graph-home.png' }],
+          images: [{ url: 'https://dev1stud.io/series/devil-styled-sheets.jpg' }],
         }}
       />
       <main className={styles['mainPage']}>

@@ -24,7 +24,7 @@ const posts = [
   {
     id: uuidv4(),
     thumbnail: "/20211015/summary",
-    subject: "멀티버스 프레임워크! Meta React & React Native",
+    subject: "메타버스 프레임워크! Meta React & React Native",
     category: "Comparative Frameworks",
     url: "/20211015",
     datetime: "2021.10.15",

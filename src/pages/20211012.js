@@ -50,7 +50,7 @@ function ArticlePage() {
       <aside><Profile /></aside>
       <Pager
         nextAddress={`/20211015`}
-        nextTitle={'멀티버스 프레임워크! Meta React & React Native'}
+        nextTitle={'메타버스 프레임워크! Meta React & React Native'}
       />
       {/* <Disqus
         config={{

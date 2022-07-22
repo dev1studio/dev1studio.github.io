@@ -50,7 +50,7 @@ function ArticlePage() {
       <aside><Profile /></aside>
       <Pager
         previousAddress={`/20211201`}
-        previousTitle={'CSS와 Module CSS 비교'}
+        previousTitle={'CSS와 CSS Module 비교'}
       />
       {/* <Disqus
         config={{

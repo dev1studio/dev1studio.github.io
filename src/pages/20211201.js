@@ -50,7 +50,7 @@ function ArticlePage() {
       <aside><Profile /></aside>
       <Pager
         previousAddress={`/20211015`}
-        previousTitle={'멀티버스 프레임워크! Meta React & React Native'}
+        previousTitle={'메타버스 프레임워크! Meta React & React Native'}
         nextAddress={`/20211207`}
         nextTitle={'emotion vs. Sass 승자는?!..'}
       />
