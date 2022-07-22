@@ -18,6 +18,10 @@ function IndexPage() {
         title='Home | O612 DEV1L.studio'
         description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
         canonical='https://dev1stud.io/'
+        metaTags={[{
+          property: 'keywords',
+          content: 'React, ReactJS, style, CSS, Sass, emotion, styled-components, code, coding, 리액트, 스타일, 이모션, 퍼블리싱, 코딩, 개발'
+        }]}
         openGraph={{
           type: 'site',
           title: 'O612 DEV1L.studio',

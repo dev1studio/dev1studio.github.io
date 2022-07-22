@@ -1,4 +1,5 @@
 import * as React from "react"
+import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 // import { Disqus } from 'gatsby-plugin-disqus'
 import Container from '../components/layout'
@@ -23,6 +24,10 @@ function ArticlePage() {
         title={`${pageTitle} | ${siteTitle}`}
         description={subTitle}
         canonical={pageAddress}
+        metaTags={[{
+          property: 'keywords',
+          content: 'style, emotion, Sass, 스타일, 이모션, 퍼블리싱'
+        }]}
         openGraph={{
           type: 'article',
           title: siteTitle,
@@ -35,6 +40,10 @@ function ArticlePage() {
         <h1>{pageTitle}</h1>
         <small>{subTitle}</small>
         <time>{pageDateTime}</time>
+        <picture>
+          <source srcSet={`/${pageIdentifier}/summary.webp?${uuidv4()}`} type="image/webp" />
+          <img src={`/${pageIdentifier}/summary.png?${uuidv4()}`} alt='' />
+        </picture>
         <Article />
         <strong className={styles['articleFIN']}>FIN!</strong>
       </article>

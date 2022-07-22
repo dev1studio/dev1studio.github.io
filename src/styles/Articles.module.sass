@@ -40,7 +40,7 @@
       margin: rem(20) 0 rem(70)
       font-size: rem(14)
 
-    + img
+    + picture
       width: 100%
 
       + h2
@@ -195,16 +195,27 @@
       dt
         display: flex
         align-items: center
-        margin-bottom: rem(10)
-        font-size: rem(14)
+        margin-bottom: rem(7)
+        font-size: rem(12)
         opacity: .7
+
+        +mq(minXsmall)
+          margin-bottom: rem(10)
+          font-size: rem(14)
 
         &::before
           content: ''
           display: block
-          width: rem(20)
-          height: rem(20)
+          width: rem(18)
+          height: rem(18)
+
+          +mq(minXsmall)
+            width: rem(20)
+            height: rem(20)
 
       dd
         font-weight: 700
-        font-size: rem(16)
+        font-size: rem(14)
+
+        +mq(minXsmall)
+          font-size: rem(16)

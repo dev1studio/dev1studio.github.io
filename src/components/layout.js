@@ -133,7 +133,7 @@ function Container({ children }) {
   return (
     <Contents>
       <Header>
-        <h1><LinkButton href='/'>O612</LinkButton> DEV1L.studio</h1>
+        <h1><LinkButton href='/'>&lt;O612 DEV1L={String.fromCharCode(123)}studio{String.fromCharCode(125)} /&gt;</LinkButton></h1>
         <Nav>
           <ol>
             <li><LinkButton href='/bio'><span><b>B</b><i>io</i></span></LinkButton></li>

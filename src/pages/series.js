@@ -43,6 +43,7 @@ function SeriesPage() {
                   )}
                 </div>
                 <strong>{sery.category}</strong>
+                <p>{sery.description}</p>
               </LinkButton>
             </li>
           ))}

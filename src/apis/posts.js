@@ -14,12 +14,22 @@ const posts = [
   {
     id: uuidv4(),
     thumbnail: "/20211201/summary",
-    subject: "CSS와 Module CSS 비교",
+    subject: "CSS와 CSS Module 비교",
     category: "Devil Styled Sheets",
     url: "/20211201",
     datetime: "2021.12.01",
     badge: false,
     description: "클래스 또는 태그를 선택자로 사용하여 스타일 작성시 가장 까다로운 것은 global로 써도 되는 것과 그렇지 못한 것을 구분하여 사이드 이펙트가 발생하지 않게 스타일링을 하는것일 겁니다.",
+  },
+  {
+    id: uuidv4(),
+    thumbnail: "/20211015/summary",
+    subject: "멀티버스 프레임워크! Meta React & React Native",
+    category: "Comparative Frameworks",
+    url: "/20211015",
+    datetime: "2021.10.15",
+    badge: false,
+    description: "ReactJS는 Facebook(현 Meta)의 Jordan Walke에 의해 탄생된 JavaScript library framework 입니다.",
   },
   {
     id: uuidv4(),

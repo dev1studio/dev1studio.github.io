@@ -1,10 +1,9 @@
 import * as React from "react"
 import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
-// import { Disqus } from 'gatsby-plugin-disqus'
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211012'
+import Article from '../contents/20211015'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -12,11 +11,11 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = 'CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교'
-  const pageDateTime = '2021.10.12'
+  const pageTitle = '멀티버스 프레임워크! Meta React & React Native'
+  const pageDateTime = '2021.10.15'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
-  const subTitle = 'emotion, styled-components 그리고 Sass, CSS의 비교'
+  const subTitle = '메타(페이스북)의 언어 세계'
 
   return (
     <Container>
@@ -26,14 +25,14 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: 'style, CSS, Sass, emotion, styled-components, 스타일, 이모션, 퍼블리싱'
+          content: 'meta, facebook, react, reactnative, 메타, 페이스북, 페북, 리액트, 리액트네이티브'
         }]}
         openGraph={{
           type: 'article',
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: pageAddress + '/losse.jpeg' }],
+          images: [{ url: pageAddress + '/samesame.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -49,16 +48,11 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        nextAddress={`/20211015`}
-        nextTitle={'멀티버스 프레임워크! Meta React & React Native'}
+        previousAddress={`/20211012`}
+        previousTitle={'CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교'}
+        nextAddress={`/20211201`}
+        nextTitle={'CSS와 CSS Module 비교'}
       />
-      {/* <Disqus
-        config={{
-          url: pageAddress,
-          identifier: pageIdentifier,
-          title: pageTitle,
-        }}
-      /> */}
       <PostComment />
     </Container>
   )
