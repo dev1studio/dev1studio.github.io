@@ -1,7 +1,7 @@
 import React from "react"
 import styled from '@emotion/styled'
 import LinkButton from './utilities/linkButton'
-import { colors, fontWeights, mq, Rem } from '../styles/designSystem'
+import { colors, fontWeights, mixin, mq, Rem } from '../styles/designSystem'
 
 const Contents = styled.div({
   width: '100%',
@@ -18,6 +18,12 @@ const Header = styled.header({
     fontSize: Rem(18),
     '& a': {
       color: colors.yellow,
+      '&::before': {
+        content: "'<O612 DEV1L={studio} />'",
+      },
+    },
+    '& span': {
+      ...mixin.screenReaderOnly,
     },
   },
 })
@@ -129,11 +135,39 @@ const BlogLink = styled(LinkButton)({
   },
 })
 
+const Aside = styled.aside({
+  backgroundColor: '#005BBB',
+  padding: Rem(15),
+  textAlign: 'center',
+  color: '#FFD500',
+  '& a': {
+    display: 'inline-flex',
+    marginLeft: Rem(10),
+    fontWeight: 900,
+    color: '#FFD500',
+    [mq.maxTablet]: {
+      display: 'block',
+    },
+    '&:hover, &:focus': {
+      textDecoration: 'underline',
+    },
+  },
+})
+
 function Container({ children }) {
   return (
     <Contents>
+      <Aside>
+        Support Ukraine 🇺🇦
+        {' '}
+        <LinkButton href='https://www.unhcr.or.kr/ukraine-emergency/'>우크라이나 긴급구호 함께해요!</LinkButton>
+      </Aside>
       <Header>
-        <h1><LinkButton href='/'>&lt;O612 DEV1L={String.fromCharCode(123)}studio{String.fromCharCode(125)} /&gt;</LinkButton></h1>
+        <h1>
+          <LinkButton href='/'>
+            <span>'공육일이'의 데브런닷 스튜디오</span>
+          </LinkButton>
+        </h1>
         <Nav>
           <ol>
             <li><LinkButton href='/bio'><span><b>B</b><i>io</i></span></LinkButton></li>
