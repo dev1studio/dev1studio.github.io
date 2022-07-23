@@ -15,23 +15,23 @@ function DevilStyledSheetsPage() {
   return (
     <Container>
       <GatsbySeo
-        title='Series - Comparative Frameworks | O612 DEV1L.studio'
+        title='Series - Street Code Fighters | O612 DEV1L.studio'
         description='O612의 악마적인 공간 - 데벌리시 데브런닷 스튜디오'
-        canonical='https://dev1stud.io/comparative-frameworks'
+        canonical='https://dev1stud.io/street-code-fighters'
         openGraph={{
           type: 'site',
           title: 'O612 DEV1L.studio',
-          description: 'Series - Comparative Frameworks',
-          url: 'https://dev1stud.io/comparative-frameworks',
-          images: [{ url: 'https://dev1stud.io/series/comparative-frameworks.jpg' }],
+          description: 'Series - Street Code Fighters',
+          url: 'https://dev1stud.io/street-code-fighters',
+          images: [{ url: 'https://dev1stud.io/series/street-code-fighters.jpg' }],
         }}
       />
       <main className={styles['mainPage']}>
         <Profile />
         <Route route='series' />
-        <h2>Comparative Frameworks</h2>
+        <h2>Street Code Fighters</h2>
         <ul>
-          {posts.filter(post => post.category === 'Comparative Frameworks').map(post =>
+          {posts.filter(post => post.category === 'Street Code Fighters').map(post =>
             <li key={post.id}>
               <LinkButton href={post.url}>
                 <div className={styles['listThumbnail']}>

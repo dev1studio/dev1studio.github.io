@@ -1,10 +1,9 @@
 import * as React from "react"
 import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
-// import { Disqus } from 'gatsby-plugin-disqus'
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211207'
+import Article from '../contents/20211210'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -12,11 +11,11 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = 'emotion vs. Sass 승자는?!..'
-  const pageDateTime = '2021.12.07'
+  const pageTitle = '한글이나 히라가나 등의 non-English 언어로 변수명을 작명해도 동작할까?'
+  const pageDateTime = '2021.12.10'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
-  const subTitle = '이기는 놈이 내 편'
+  const subTitle = 'development language VS. human language'
 
   return (
     <Container>
@@ -26,7 +25,7 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: 'style, emotion, Sass, 스타일, 이모션, 퍼블리싱'
+          content: 'language, react, non-english, const, function, 언어, 리액트, 변수'
         }]}
         openGraph={{
           type: 'article',
@@ -49,18 +48,9 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        previousAddress={`/20211205`}
-        previousTitle={'macOS 필수 설치 앱'}
-        nextAddress={`/20211210`}
-        nextTitle={'한글이나 히라가나 등의 non-English 언어로 변수명을 작명해도 동작할까?'}
+        previousAddress={`/20211207`}
+        previousTitle={'emotion vs. Sass 승자는?!..'}
       />
-      {/* <Disqus
-        config={{
-          url: pageAddress,
-          identifier: pageIdentifier,
-          title: pageTitle,
-        }}
-      /> */}
       <PostComment />
     </Container>
   )

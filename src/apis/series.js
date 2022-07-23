@@ -22,6 +22,13 @@ const series = [
     url: "/unpretty-macos",
     description: "아주 NICE! 애플 생태계",
   },
+  {
+    id: uuidv4(),
+    thumbnail: "/series/street-code-fighters",
+    category: "Street Code Fighters",
+    url: "/street-code-fighters",
+    description: "싸우자 코드야",
+  },
 ]
 
 export default series;

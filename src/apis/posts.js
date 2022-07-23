@@ -3,6 +3,16 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/20211210/summary",
+    subject: "한글이나 히라가나 등의 non-English 언어로 변수명을 작명해도 동작할까?",
+    category: "Street Code Fighters",
+    url: "/20211210",
+    datetime: "2021.12.10",
+    badge: false,
+    description: "React 환경에서 다양한 인간 언어(human language)로 변수를 만들고 Vanila 환경에서도 변수를 만들어서 동작하는지를 테스트해 볼 것입니다.",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/20211207/summary",
     subject: "emotion vs. Sass 승자는?!..",
     category: "Devil Styled Sheets",
