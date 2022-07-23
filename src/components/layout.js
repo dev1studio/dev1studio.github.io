@@ -165,7 +165,7 @@ function Container({ children }) {
       <Header>
         <h1>
           <LinkButton href='/'>
-            <span>'공육일이'의 데브런닷 스튜디오</span>
+            <span>O612의 데브런닷 스튜디오</span>
           </LinkButton>
         </h1>
         <Nav>

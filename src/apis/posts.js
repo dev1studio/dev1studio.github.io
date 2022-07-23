@@ -3,6 +3,26 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/20211214/summary",
+    subject: "`한글`로 컴포넌트 만들기!",
+    category: "Street Code Fighters",
+    url: "/20211214",
+    datetime: "2021.12.14",
+    badge: false,
+    description: "Hangeul asinyagoyo!",
+  },
+  {
+    id: uuidv4(),
+    thumbnail: "/20211213/summary",
+    subject: "`한글`로 변수 만들어도 동작할까?",
+    category: "Street Code Fighters",
+    url: "/20211213",
+    datetime: "2021.12.13",
+    badge: false,
+    description: "Hangeul arayo?",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/20211212/summary",
     subject: "Apple Silicon macOS에 Homebrew 설치하기",
     category: "unPretty macOS",

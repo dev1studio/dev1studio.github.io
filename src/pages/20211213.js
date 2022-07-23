@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211212'
+import Article from '../contents/20211213'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -11,11 +11,11 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = 'Apple Silicon macOS에 Homebrew 설치하기'
-  const pageDateTime = '2021.12.12'
+  const pageTitle = '`한글`로 변수 만들어도 동작할까?'
+  const pageDateTime = '2021.12.13'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
-  const subTitle = 'Shall we beer?'
+  const subTitle = 'Hangeul arayo?'
 
   return (
     <Container>
@@ -25,14 +25,14 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: 'macos, homebrew, brew, 맥os, 맥주'
+          content: 'react, variable, hangul, 리액트, 변수, 한글'
         }]}
         openGraph={{
           type: 'article',
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: pageAddress + '/question.jpeg' }],
+          images: [{ url: pageAddress + '/sibam.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -48,10 +48,10 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        previousAddress={`/20211211`}
-        previousTitle={'ReactJS와 React Native에서 emotion & styled-components 써보기'}
-        nextAddress={`/20211213`}
-        nextTitle={'`한글`로 변수 만들어도 동작할까?'}
+        previousAddress={`/20211212`}
+        previousTitle={'Apple Silicon macOS에 Homebrew 설치하기'}
+        nextAddress={`/20211214`}
+        nextTitle={'`한글`로 컴포넌트 만들기!'}
       />
       <PostComment />
     </Container>
