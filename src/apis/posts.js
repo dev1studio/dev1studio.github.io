@@ -13,6 +13,16 @@ const posts = [
   },
   {
     id: uuidv4(),
+    thumbnail: "/20211205/summary",
+    subject: "macOS 필수 설치 앱",
+    category: "unPretty macOS",
+    url: "/20211205",
+    datetime: "2021.12.05",
+    badge: false,
+    description: "M1 맥북프로 13인치를 사용하고 있는데 이 장비로 제가 하는 것은 업무 90%, 개인 10% 비중으로 쓰고 있습니다.",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/20211201/summary",
     subject: "CSS와 CSS Module 비교",
     category: "Devil Styled Sheets",

@@ -56,6 +56,10 @@
       margin: rem(16) 0
       font-size: rem(18)
 
+  a
+    color: $color-mint
+    text-decoration: underline
+
   blockquote
     background-color: rgba($color-light, .1)
     margin: rem(15) 0
@@ -112,9 +116,6 @@
     +mq(minXsmall)
       margin: rem(20) 0
 
-    img
-      max-width: 100%
-
     figcaption
       margin-top: rem(5)
       font-size: rem(14)
@@ -122,6 +123,22 @@
 
       +mq(minXsmall)
         font-size: rem(12)
+
+  ul
+    list-style-type: disc
+    margin-left: rem(16)
+
+    +mq(minXsmall)
+      margin-left: rem(18)
+
+    li
+      margin: rem(5) 0
+      display: list-item
+      font-size: rem(16)
+      line-height: 1.7
+
+      +mq(minXsmall)
+        font-size: rem(18)
 
   strong
     &:not(.articleFIN)
@@ -139,6 +156,11 @@
       +mq(minXsmall)
         margin-top: rem(50)
         font-size: rem(28)
+
+  em
+    font-style: normal
+    text-decoration: line-through
+    opacity: .7
 
   p > code
     display: inline-block

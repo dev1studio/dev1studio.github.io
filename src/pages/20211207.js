@@ -4,7 +4,7 @@ import { GatsbySeo } from "gatsby-plugin-next-seo"
 // import { Disqus } from 'gatsby-plugin-disqus'
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211207'
+import Article from '../contents/20211205'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -49,8 +49,8 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        previousAddress={`/20211201`}
-        previousTitle={'CSS와 CSS Module 비교'}
+        previousAddress={`/20211205`}
+        previousTitle={'macOS 필수 설치 앱'}
       />
       {/* <Disqus
         config={{
