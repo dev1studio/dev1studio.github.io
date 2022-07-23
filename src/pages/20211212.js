@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211211'
+import Article from '../contents/20211212'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -11,11 +11,11 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = 'ReactJS와 React Native에서 emotion & styled-components 써보기'
-  const pageDateTime = '2021.12.11'
+  const pageTitle = 'Apple Silicon macOS에 Homebrew 설치하기'
+  const pageDateTime = '2021.12.12'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
-  const subTitle = '근데 TypeScript를 곁들인'
+  const subTitle = 'Shall we beer?'
 
   return (
     <Container>
@@ -25,14 +25,14 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: 'react, reactjs, reactnative, emotion, styled-components, 리액트, 리액트네이티브, 이모션, 스타일드, 컴포넌트'
+          content: 'macos, homebrew, brew, 맥os, 맥주'
         }]}
         openGraph={{
           type: 'article',
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: pageAddress + '/easy.jpeg' }],
+          images: [{ url: pageAddress + '/question.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -48,10 +48,8 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        previousAddress={`/20211210`}
-        previousTitle={'한글이나 히라가나 등의 non-English 언어로 변수명을 작명해도 동작할까?'}
-        nextAddress={`/20211212`}
-        nextTitle={'Apple Silicon macOS에 Homebrew 설치하기기'}
+        previousAddress={`/20211211`}
+        previousTitle={'ReactJS와 React Native에서 emotion & styled-components 써보기'}
       />
       <PostComment />
     </Container>

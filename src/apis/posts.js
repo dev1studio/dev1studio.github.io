@@ -3,6 +3,16 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/20211212/summary",
+    subject: "Apple Silicon macOS에 Homebrew 설치하기",
+    category: "unPretty macOS",
+    url: "/20211212",
+    datetime: "2021.12.12",
+    badge: false,
+    description: "얼마전 M1 MacBook Pro 13인치를 내돈내산했습니다. M1 MacBook Pro 13인치를 구매하고 제일 먼저 설치한 건 iTerm과 Xcode 입니다. 그리고 iTerm으로 Homebrew 설치를 시도했습니다.",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/20211211/summary",
     subject: "ReactJS와 React Native에서 emotion & styled-components 써보기",
     category: "Comparative Frameworks",
