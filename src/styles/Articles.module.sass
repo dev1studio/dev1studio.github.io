@@ -98,6 +98,10 @@
     +mixin(imageRendering)
     max-width: 100%
 
+  iframe
+    +not-supports-aspect-ratio-box(1920, 1080)
+    border: 0
+
   hr
     margin: rem(25) 0
     border: rem(1) solid rgba($color-yellow, .5)

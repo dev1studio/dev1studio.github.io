@@ -3,6 +3,16 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/20211211/summary",
+    subject: "ReactJS와 React Native에서 emotion & styled-components 써보기",
+    category: "Comparative Frameworks",
+    url: "/20211211",
+    datetime: "2021.12.11",
+    badge: false,
+    description: "ReactJS(이하 React)와 React Native(이하 RN)에서 사용하는 패키지가 RN에서는 추가로 더 설치해야 하는 dependency가 있을 수 있습니다. 이 차이는 RN이 Native라서 발생합니다.",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/20211210/summary",
     subject: "한글이나 히라가나 등의 non-English 언어로 변수명을 작명해도 동작할까?",
     category: "Street Code Fighters",
