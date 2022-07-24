@@ -1,0 +1,145 @@
+import { v4 as uuidv4 } from 'uuid';
+import YouTubeVideo from '../components/utilities/youTube';
+import CodeSandboxPreview from '../components/utilities/codeSandbox';
+import LinkButton from '../components/utilities/linkButton';
+import "@deckdeckgo/highlight-code";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
+
+## Prologue
+
+React로 간단한 성탄 카드를 만들어 볼게요!
+
+<figure>
+  <picture>
+    <source srcSet={`/0/20211225/tree.webp?${uuidv4()}`} type="image/webp" />
+    <img src={`/0/20211225/tree.png?${uuidv4()}`} alt='' />
+  </picture>
+  <figcaption>예제로 사용할 이미지</figcaption>
+</figure>
+
+> 예제 이미지는 브라우저 버전에 따라서 `.webp`로 보일 수도, `.png`로 보일 수도 있습니다.
+
+---
+
+## App.js
+
+```jsx
+import { ThemeProvider } from "@emotion/react"
+import styled from "@emotion/styled"
+import styles from "./index.module.sass"
+
+const theme = {
+  middle: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)"
+  }
+}
+
+const Container = styled.button((props) => ({
+  width: "340px",
+  height: "480px",
+  position: props.theme.middle.position,
+  left: props.theme.middle.left,
+  transform: props.theme.middle.transform,
+}))
+
+const Contents = styled.div({
+  width: "100%",
+  height: "100%",
+  overflow: "hidden",
+  backfaceVisibility: "hidden",
+  position: "absolute",
+  transition: "transform .5s linear",
+})
+
+const BackContents = styled.div((props) => ({
+  position: props.theme.middle.position,
+  top: props.theme.middle.top,
+  left: props.theme.middle.left,
+  transform: props.theme.middle.transform,
+}))
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Container type="button" className={styles.Container}>
+        <Contents className={styles.Cover} />
+        <Contents className={styles.Main}>
+          <BackContents className={styles.BackContent}>
+            <h1>Merry Christmas</h1>
+            <p>Happy Holiday</p>
+          </BackContents>
+        </Contents>
+      </Container>
+    </ThemeProvider>
+  )
+}
+
+export default App
+```
+
+## index.module.sass
+
+```sass
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&family=Zilla+Slab+Highlight:wght@700&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  text-dectoration: none
+
+body
+  background: #b18979
+
+button
+  padding: 0
+  border: 0
+  background-color: transparent
+  cursor: pointer
+
+.Container:hover >
+  .Cover
+    transform: perspective(600px) rotateY(-180deg)
+  .Main
+    transform: perspective(600px) rotateY(0deg)
+
+.Cover
+  background: url(https://uploads.codesandbox.io/uploads/user/5408ce2b-8ac4-40cc-be47-ff3b66b025e3/ai-Z-tree.png) no-repeat 50% 50%/contain
+
+.Main
+  background-color: transparent
+  transform: rotateY(180deg)
+
+.BackContent
+  color: #2c3e50
+  text-align: center
+  width: 100%
+
+  h1
+    font-size: 3rem
+    font-family: 'Love Light', cursive
+  p
+    font-size: 2.5rem
+    font-family: 'Zilla Slab Highlight', cursive
+```
+
+> 여기서는 Google Fonts를 구글 서버에서 바로 import하는 방식을 취했지만 실무에서는 @fontsource 패키지를 사용하는 것을 추천합니다.
+>
+> @fontsource 패키지 사용하여 웹폰트 사용하는 방법은 언젠가 시간이 될 때 예제 코드로 설명하는 시간을 가지도록 할게요.
+
+## Preview
+
+<CodeSandboxPreview SENDBOX_TITLE={'react-christmas'} />
+
+---
+
+## Epilogue
+
+__즐거운 캐롤과 함께 홀리데이 보내길!__
+
+*(캐롤입니다. 케빈 아니구요, 컬킨 아닙니다)*
+
+<LinkButton href='https://various-artists.postype.com/post/11278509'>관련 링크</LinkButton>

@@ -3,6 +3,26 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/0/20211227/summary",
+    subject: "Apple 웹사이트 헤더처럼 배경에 블러 효과 주기",
+    category: "Devil Styled Sheets",
+    url: "/20211227",
+    datetime: "2021.12.27",
+    badge: false,
+    description: "예전에는 CSS에서 처리할 방법이 없어서 HTML5의 canvas를 이용해 구현했습니다. canvas 구현의 문제점은 퍼포먼스가 떨어진다는 점이었는데 요즘은 쉽게 CSS3를 이용해 구현이 가능합니다.",
+  },
+  {
+    id: uuidv4(),
+    thumbnail: "/0/20211225/summary",
+    subject: "Merry Christmas and Happy Holiday",
+    category: "Devil Styled Sheets",
+    url: "/20211225",
+    datetime: "2021.12.25",
+    badge: false,
+    description: "간단한 성탄 카드를 만들어 볼게요!",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/0/20211222/summary",
     subject: "Vanilla 환경에서 한글로 뻘 코딩하기",
     category: "Street Code Fighters",

@@ -1,0 +1,138 @@
+import { v4 as uuidv4 } from 'uuid';
+import YouTubeVideo from '../components/utilities/youTube';
+import CodeSandboxPreview from '../components/utilities/codeSandbox';
+import LinkButton from '../components/utilities/linkButton';
+import "@deckdeckgo/highlight-code";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
+
+## Prologue
+
+예전에는 CSS에서 처리할 방법이 없어서 HTML5의 canvas를 이용해 구현했습니다.
+
+canvas 구현의 문제점은 퍼포먼스가 떨어진다는 점이었는데 요즘은 쉽게 CSS3를 이용해 구현이 가능합니다.
+
+---
+
+## Source
+
+```jsx
+import styled from "@emotion/styled"
+import "./index.sass"
+
+const Container = styled.div({
+  display: "flex",
+  flexDirection: "column"
+})
+
+const Header = styled.header({
+  right: 0,
+  left: 0,
+  zIndex: 1,
+  backdropFilter: "saturate(180%) blur(20px)",
+  position: "fixed",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  height: "72px",
+  color: "#fff",
+  "& h1, & h2": {
+    margin: 0,
+    width: "100%",
+    textAlign: "center"
+  },
+  "& h1": {
+    backgroundColor: "rgba(0,0,0,0.8)",
+    padding: ".4em 0 .1em",
+    fontSize: "1.5rem",
+    fontWeight: "lighter"
+  },
+  "& h2": {
+    backgroundColor: "rgba(255,255,255,0.72)",
+    padding: ".1em 0 .3em",
+    fontSize: "1.2rem",
+    color: "#000"
+  }
+})
+
+const Main = styled.main({
+  padding: "1em"
+})
+
+const Section = styled.section({
+  "& img": {
+    maxWidth: "100%"
+  }
+})
+
+function App() {
+  return (
+    <Container>
+      <Header>
+        <h1>React Backdrop Filter</h1>
+        <h2>Image origin source by Apple</h2>
+      </Header>
+      <Main>
+        <Section>
+          <picture>
+            <img
+              src="https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/display/screen_xdr__fksbj0zqvtu2_large.jpg"
+              alt=""
+            />
+            <p>Blackmagic Design DaVinci Resolve</p>
+          </picture>
+        </Section>
+        <Section>
+          <picture>
+            <img
+              src="https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/macos/screen_macos__fuhzca3c0wia_large.jpg"
+              alt=""
+            />
+            <p>Beauty and the beast</p>
+          </picture>
+        </Section>
+      </Main>
+    </Container>
+  )
+}
+
+export default App
+```
+
+## backdropFilter
+
+위 코드에서 중요한 부분은 backdropFilter 입니다. (CSS: backdrop-filter)
+
+saturate는 채도, blur는 블러 값입니다.
+
+채도는 높으면 높을 수록 쨍한 느낌을 주고, 낮으면 낮을 수록 색이 죽습니다.
+
+<LinkButton href='https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/saturate()'>관련 링크</LinkButton>
+
+blur는 값이 높을 수록 블러 효과가 강해집니다.
+
+<LinkButton href='https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur()'>관련 링크</LinkButton>
+
+## Preview
+
+<CodeSandboxPreview SENDBOX_TITLE={'react-backdrop-filter'} />
+
+---
+
+## Epilogue
+
+<figure>
+  <picture>
+    <source srcSet={`/0/20211227/apple.webp?${uuidv4()}`} type="image/webp" />
+    <img src={`/0/20211227/apple.png?${uuidv4()}`} alt='' />
+  </picture>
+  <figcaption>앱등뽕이 차오른다</figcaption>
+</figure>
+
+요즘은 `-webkit-` verdor prefix 없이 backdrop-filter 만으로도 적용이 됩니다.
+
+하지만 오래된 웹킷 계열 브라우저를 위해서 `-webkit-backdrop-filter` 우선 선언하고 `backdrop-filter`를 추가로 선언하는 게 좋습니다.
+
+참고로, emotion을 사용하면 자동으로 verdor prefix를 붙여주니 emotion 많이 애용하세요!
