@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211220'
+import Article from '../contents/20211222'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -11,12 +11,12 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = 'React에서 오른쪽에서 왼쪽으로 개발하기?!'
-  const pageDateTime = '2021.12.20'
+  const pageTitle = 'Vanilla 환경에서 한글로 뻘 코딩하기'
+  const pageDateTime = '2021.12.22'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
   const ogAddress = siteAddress + '0/' + pageIdentifier
-  const subTitle = 'rmaksgo alclsshadk'
+  const subTitle = 'Vanilla HTML, Vanilla CSS, Vanilla JavaScript `한글`로 작성해보기'
 
   return (
     <Container>
@@ -26,14 +26,14 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: 'react, css, sass, module, class, classname, Abjad, 리액트, 모듈, 클래스, 아브자드'
+          content: 'vanilla, html, css, javascript, js, 바닐라, 자바스크립트, 스타일'
         }]}
         openGraph={{
           type: 'article',
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: ogAddress + '/mafia.jpeg' }],
+          images: [{ url: ogAddress + '/naman.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -49,10 +49,8 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        previousAddress={`/20211218`}
-        previousTitle={'일본의 `카나`를 React에서 이름으로 써보기'}
-        nextAddress={`/20211222`}
-        nextTitle={'Vanilla 환경에서 한글로 뻘 코딩하기'}
+        previousAddress={`/20211220`}
+        previousTitle={'React에서 오른쪽에서 왼쪽으로 개발하기?'}
       />
       <PostComment />
     </Container>

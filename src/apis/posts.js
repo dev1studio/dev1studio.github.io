@@ -3,6 +3,16 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/0/20211222/summary",
+    subject: "Vanilla 환경에서 한글로 뻘 코딩하기",
+    category: "Street Code Fighters",
+    url: "/20211222",
+    datetime: "2021.12.22",
+    badge: false,
+    description: "Vanilla 환경에서 한글로 클래스명 짓기, JavaScript 변수명 짓기, Element 생성하기를 해보고 싶었습니다. 과연 잘 될까요?",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/0/20211220/summary",
     subject: "React에서 오른쪽에서 왼쪽으로 개발하기?!",
     category: "Street Code Fighters",
@@ -99,7 +109,7 @@ const posts = [
     url: "/20211210",
     datetime: "2021.12.10",
     badge: false,
-    description: "React 환경에서 다양한 인간 언어(human language)로 변수를 만들고 Vanila 환경에서도 변수를 만들어서 동작하는지를 테스트해 볼 것입니다.",
+    description: "React 환경에서 다양한 인간 언어(human language)로 변수를 만들고 Vanilla 환경에서도 변수를 만들어서 동작하는지를 테스트해 볼 것입니다.",
   },
   {
     id: uuidv4(),
