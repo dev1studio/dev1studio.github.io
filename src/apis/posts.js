@@ -3,6 +3,26 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/0/20211217/summary",
+    subject: "class & className 이름을 한글로 지어보기",
+    category: "Street Code Fighters",
+    url: "/20211217",
+    datetime: "2021.12.17",
+    badge: false,
+    description: "Ireumi mwoyeyo? 와춰네임!",
+  },
+  {
+    id: uuidv4(),
+    thumbnail: "/0/20211216/summary",
+    subject: "디렉토리명과 이미지 파일명을 한글로 지정하면 어떻게 될까?",
+    category: "Street Code Fighters",
+    url: "/20211216",
+    datetime: "2021.12.16",
+    badge: false,
+    description: "Direktorimyeong geurigo imiji pailmyeong",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/0/20211215/summary",
     subject: "macOS Monterey 업그레이드!",
     category: "unPretty macOS",
