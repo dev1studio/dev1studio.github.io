@@ -33,7 +33,7 @@ function ArticlePage() {
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: ogAddress + '/no-mean.jpeg' }],
+          images: [{ url: ogAddress + '/koseuk.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -51,6 +51,8 @@ function ArticlePage() {
       <Pager
         previousAddress={`/20211216`}
         previousTitle={'디렉토리명과 이미지 파일명을 한글로 지정하면 어떻게 될까?'}
+        nextAddress={`/20211218`}
+        nextTitle={'일본의 `카나`를 React에서 이름으로 써보기'}
       />
       <PostComment />
     </Container>

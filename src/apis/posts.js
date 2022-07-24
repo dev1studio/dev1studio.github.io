@@ -3,6 +3,26 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/0/20211220/summary",
+    subject: "React에서 오른쪽에서 왼쪽으로 개발하기?!",
+    category: "Street Code Fighters",
+    url: "/20211220",
+    datetime: "2021.12.20",
+    badge: false,
+    description: "rmaksgo alclsshadk",
+  },
+  {
+    id: uuidv4(),
+    thumbnail: "/0/20211218/summary",
+    subject: "일본의 `카나`를 React에서 이름으로 써보기",
+    category: "Street Code Fighters",
+    url: "/20211218",
+    datetime: "2021.12.18",
+    badge: false,
+    description: "君の名前は？",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/0/20211217/summary",
     subject: "class & className 이름을 한글로 지어보기",
     category: "Street Code Fighters",

@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211215'
+import Article from '../contents/20211218'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -11,12 +11,12 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = 'macOS Monterey 업그레이드!'
-  const pageDateTime = '2021.12.15'
+  const pageTitle = '일본의 `카나`를 React에서 이름으로 써보기'
+  const pageDateTime = '2021.12.18'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
   const ogAddress = siteAddress + '0/' + pageIdentifier
-  const subTitle = '몬터레이'
+  const subTitle = '君の名前は？'
 
   return (
     <Container>
@@ -26,14 +26,14 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: 'apple, macos, monterey, 애플, 맥오에스, 맥os, 몬터레이'
+          content: 'react, css, sass, module, class, classname, kana, 리액트, 모듈, 클래스, 카나'
         }]}
         openGraph={{
           type: 'article',
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: ogAddress + '/wait.jpeg' }],
+          images: [{ url: ogAddress + '/result.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -49,10 +49,10 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        previousAddress={`/20211214`}
-        previousTitle={'`한글`로 컴포넌트 만들기!'}
-        nextAddress={`/20211216`}
-        nextTitle={'디렉토리명과 이미지 파일명을 한글로 지정하면 어떻게 될까?'}
+        previousAddress={`/20211217`}
+        previousTitle={'class & className 이름을 한글로 지어보기'}
+        nextAddress={`/20211220`}
+        nextTitle={'React에서 오른쪽에서 왼쪽으로 개발하기?!'}
       />
       <PostComment />
     </Container>

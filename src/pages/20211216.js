@@ -33,7 +33,7 @@ function ArticlePage() {
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: ogAddress + '/no-mean.jpeg' }],
+          images: [{ url: ogAddress + '/chat.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
