@@ -3,7 +3,17 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
-    thumbnail: "/20211214/summary",
+    thumbnail: "/0/20211215/summary",
+    subject: "macOS Monterey 업그레이드!",
+    category: "unPretty macOS",
+    url: "/20211215",
+    datetime: "2021.12.15",
+    badge: false,
+    description: "macOS Monterey는 Apple에서 내놓은 macOS 12버전 이름입니다. big Sur 부터 macOS 10버전을 벗어났습니다. Mac OS X 10.11까지만 OSX 명칭을 사용했고 macOS 10.12부터 OSX을 버리고 macOS라는 명칭을 쓰기 시작했습니다.",
+  },
+  {
+    id: uuidv4(),
+    thumbnail: "/0/20211214/summary",
     subject: "`한글`로 컴포넌트 만들기!",
     category: "Street Code Fighters",
     url: "/20211214",
@@ -13,7 +23,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211213/summary",
+    thumbnail: "/0/20211213/summary",
     subject: "`한글`로 변수 만들어도 동작할까?",
     category: "Street Code Fighters",
     url: "/20211213",
@@ -23,7 +33,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211212/summary",
+    thumbnail: "/0/20211212/summary",
     subject: "Apple Silicon macOS에 Homebrew 설치하기",
     category: "unPretty macOS",
     url: "/20211212",
@@ -33,7 +43,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211211/summary",
+    thumbnail: "/0/20211211/summary",
     subject: "ReactJS와 React Native에서 emotion & styled-components 써보기",
     category: "Comparative Frameworks",
     url: "/20211211",
@@ -43,7 +53,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211210/summary",
+    thumbnail: "/0/20211210/summary",
     subject: "한글이나 히라가나 등의 non-English 언어로 변수명을 작명해도 동작할까?",
     category: "Street Code Fighters",
     url: "/20211210",
@@ -53,7 +63,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211207/summary",
+    thumbnail: "/0/20211207/summary",
     subject: "emotion vs. Sass 승자는?!..",
     category: "Devil Styled Sheets",
     url: "/20211207",
@@ -63,7 +73,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211205/summary",
+    thumbnail: "/0/20211205/summary",
     subject: "macOS 필수 설치 앱",
     category: "unPretty macOS",
     url: "/20211205",
@@ -73,7 +83,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211201/summary",
+    thumbnail: "/0/20211201/summary",
     subject: "CSS와 CSS Module 비교",
     category: "Devil Styled Sheets",
     url: "/20211201",
@@ -83,7 +93,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211015/summary",
+    thumbnail: "/0/20211015/summary",
     subject: "메타버스 프레임워크! Meta React & React Native",
     category: "Comparative Frameworks",
     url: "/20211015",
@@ -93,7 +103,7 @@ const posts = [
   },
   {
     id: uuidv4(),
-    thumbnail: "/20211012/summary",
+    thumbnail: "/0/20211012/summary",
     subject: "CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교",
     category: "Devil Styled Sheets",
     url: "/20211012",

@@ -15,6 +15,7 @@ function ArticlePage() {
   const pageDateTime = '2021.12.05'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
+  const ogAddress = siteAddress + '0/' + pageIdentifier
   const subTitle = '직업과 상관없는 앱 소개'
 
   return (
@@ -32,7 +33,7 @@ function ArticlePage() {
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: pageAddress + '/hannam-attact.jpeg' }],
+          images: [{ url: ogAddress + '/hannam-attact.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -40,8 +41,8 @@ function ArticlePage() {
         <small>{subTitle}</small>
         <time>{pageDateTime}</time>
         <picture>
-          <source srcSet={`/${pageIdentifier}/summary.webp?${uuidv4()}`} type="image/webp" />
-          <img src={`/${pageIdentifier}/summary.png?${uuidv4()}`} alt='' />
+          <source srcSet={`/0/${pageIdentifier}/summary.webp?${uuidv4()}`} type="image/webp" />
+          <img src={`/0/${pageIdentifier}/summary.png?${uuidv4()}`} alt='' />
         </picture>
         <Article />
         <strong className={styles['articleFIN']}>FIN!</strong>

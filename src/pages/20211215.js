@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211015'
+import Article from '../contents/20211215'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -11,12 +11,12 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = '메타버스 프레임워크! Meta React & React Native'
-  const pageDateTime = '2021.10.15'
+  const pageTitle = 'macOS Monterey 업그레이드!'
+  const pageDateTime = '2021.12.15'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
   const ogAddress = siteAddress + '0/' + pageIdentifier
-  const subTitle = '메타(페이스북)의 언어 세계'
+  const subTitle = '몬터레이'
 
   return (
     <Container>
@@ -26,14 +26,14 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: 'meta, facebook, react, reactnative, 메타, 페이스북, 페북, 리액트, 리액트네이티브'
+          content: 'apple, macos, monterey, 애플, 맥오에스, 맥os, 몬터레이'
         }]}
         openGraph={{
           type: 'article',
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: ogAddress + '/samesame.jpeg' }],
+          images: [{ url: ogAddress + '/no-mean.jpeg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -49,10 +49,8 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        previousAddress={`/20211012`}
-        previousTitle={'CSS, CSS-in-JS 그리고 CSS Pre-processor의 비교'}
-        nextAddress={`/20211201`}
-        nextTitle={'CSS와 CSS Module 비교'}
+        previousAddress={`/20211214`}
+        previousTitle={'`한글`로 컴포넌트 만들기!'}
       />
       <PostComment />
     </Container>
