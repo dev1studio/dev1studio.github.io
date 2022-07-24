@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { v4 as uuidv4 } from 'uuid'
 import styled from '@emotion/styled'
 import posts from '../apis/posts'
@@ -8,10 +8,15 @@ import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
 import LinkButton from '../components/utilities/linkButton'
 import Route from '../components/pages/route'
+import Pagination from '../components/utilities/pagination'
 
 const Img = styled.img()
 
 function DevilStyledSheetsPage() {
+  const limit = 10
+  const [page, setPage] = useState(1)
+  const offset = (page - 1) * limit
+
   return (
     <Container>
       <GatsbySeo
@@ -31,7 +36,7 @@ function DevilStyledSheetsPage() {
         <Route route='series' />
         <h2>Devil Styled Sheets</h2>
         <ul>
-          {posts.filter(post => post.category === 'Devil Styled Sheets').map(post =>
+          {posts.filter(post => post.category === 'Devil Styled Sheets').slice(offset, offset + limit).map(post =>
             <li key={post.id}>
               <LinkButton href={post.url}>
                 <div className={styles['listThumbnail']}>
@@ -50,6 +55,12 @@ function DevilStyledSheetsPage() {
             </li>
           )}
         </ul>
+        <Pagination
+          total={posts.filter(post => post.category === 'Devil Styled Sheets').length}
+          limit={limit}
+          page={page}
+          setPage={setPage}
+        />
       </main>
     </Container>
   )

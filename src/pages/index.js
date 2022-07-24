@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { v4 as uuidv4 } from 'uuid'
 import styled from '@emotion/styled'
 import posts from '../apis/posts'
@@ -8,10 +8,15 @@ import * as styles from '../styles/Home.module.sass'
 import Profile from '../components/pages/profile'
 import LinkButton from '../components/utilities/linkButton'
 import Route from '../components/pages/route'
+import Pagination from '../components/utilities/pagination'
 
 const Img = styled.img()
 
 function IndexPage() {
+  const limit = 10
+  const [page, setPage] = useState(1)
+  const offset = (page - 1) * limit
+
   return (
     <Container>
       <GatsbySeo
@@ -34,7 +39,7 @@ function IndexPage() {
         <Profile />
         <Route route={'home'} />
         <ul>
-          {posts.map(post => (
+          {posts.slice(offset, offset + limit).map(post => (
             <li key={post.id}>
               <LinkButton href={post.url}>
                 <div className={styles['listThumbnail']}>
@@ -53,6 +58,12 @@ function IndexPage() {
             </li>
           ))}
         </ul>
+        <Pagination
+          total={posts.length}
+          limit={limit}
+          page={page}
+          setPage={setPage}
+        />
       </main>
     </Container>
   )
