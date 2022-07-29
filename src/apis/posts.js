@@ -3,6 +3,16 @@ import { v4 as uuidv4 } from 'uuid';
 const posts = [
   {
     id: uuidv4(),
+    thumbnail: "/0/20211231/summary",
+    subject: "2021 회고 - 불행했던 2021년을 보내며",
+    category: "회고하기",
+    url: "/20211231",
+    datetime: "2021.12.31",
+    badge: false,
+    description: "올초, 꿈에 그리던 안정적인 직장 생활을 목전에 두었지만 완전히 틀어졌다. 그리고 이 분위기는 3분기까지 이어졌다.나는 자살이 시급했다.살아야 할 이유가 없었다. 하지만 삶의 끈을 놓치 않게 도와준 친구들이 있다.이 자리를 빌어 고마운 마음을 전한다.",
+  },
+  {
+    id: uuidv4(),
     thumbnail: "/0/20211227/summary",
     subject: "Apple 웹사이트 헤더처럼 배경에 블러 효과 주기",
     category: "Devil Styled Sheets",

@@ -29,6 +29,13 @@ const series = [
     url: "/street-code-fighters",
     description: "싸우자 코드야",
   },
+  {
+    id: uuidv4(),
+    thumbnail: "/0/series/retrospect",
+    category: "회고하기",
+    url: "/retrospect",
+    description: "회고를 해보았습니다",
+  },
 ]
 
 export default series;
