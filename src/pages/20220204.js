@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import Container from '../components/layout'
 import * as styles from '../styles/Articles.module.sass'
-import Article from '../contents/20211231'
+import Article from '../contents/20220204'
 import Profile from '../components/pages/profile.js'
 import Pager from '../components/pages/pager'
 import PostComment from '../components/utilities/utterances'
@@ -11,12 +11,12 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = '2021 회고 - 불행했던 2021년을 보내며'
-  const pageDateTime = '2021.12.31'
+  const pageTitle = 'Angular, React, Svelte 그리고 Vue로 스타일링 해볼까?'
+  const pageDateTime = '2022.02.04'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
   const ogAddress = siteAddress + '0/' + pageIdentifier
-  const subTitle = '우울하고 불행하고 외롭고 힘들었던 2021년, Good bye.'
+  const subTitle = 'Angular, React, Svelte, Vue Styling'
 
   return (
     <Container>
@@ -26,14 +26,14 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: '회고, 개발, 2021'
+          content: 'angular, react, svelte, vue, style, 앵귤러, 리액트, 스벨트, 뷰, 스타일, css'
         }]}
         openGraph={{
           type: 'article',
           title: siteTitle,
           description: pageTitle,
           url: pageAddress,
-          images: [{ url: ogAddress + '/bodap.jpeg' }],
+          images: [{ url: ogAddress + '/yougyogirl.jpg' }],
         }}
       />
       <article className={styles['articlePage']}>
@@ -49,10 +49,10 @@ function ArticlePage() {
       </article>
       <aside><Profile /></aside>
       <Pager
-        previousAddress={`/20211227`}
-        previousTitle={'Apple 웹사이트 헤더처럼 배경에 블러 효과 주기'}
-        nextAddress={`/20220105`}
-        nextTitle={'Angular, React, Svelte 그리고 Vue의 간단 비교'}
+        previousAddress={`/20220113`}
+        previousTitle={'Angular, React, Svelte 그리고 Vue를 이용해 개발 찍먹해보기'}
+        nextAddress={`/20220227`}
+        nextTitle={'Angular Universal, Next.js, SveltKit 그리고 Nuxt의 비교!'}
       />
       <PostComment />
     </Container>

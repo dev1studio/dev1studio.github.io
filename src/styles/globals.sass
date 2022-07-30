@@ -29,7 +29,7 @@ fieldset
   margin: 0
   padding: 0
 
-legend
+legend, caption
   +mixin(screenReaderOnly)
 
 label
@@ -77,3 +77,29 @@ main, article
   +mq(minXsmall)
     +mixin(widthSettings)
     padding-bottom: rem(100)
+
+.table
+  overflow-x: auto
+  -webkit-overflow-scrolling: touch
+
+  table
+    margin-top: rem(20)
+    margin-bottom: rem(20)
+    border: 0
+    border-collapse: collapse
+    width: 100%
+    vertical-align: top
+    color: #212529
+
+    th
+      font-weight: 900
+      color: $color-yellow
+
+    td
+      color: $color-light
+
+    th, td
+      border: 0
+      border-bottom: 1px solid $color-mint
+      padding: rem(5)
+      text-align: left
