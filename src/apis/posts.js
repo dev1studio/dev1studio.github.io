@@ -4,9 +4,9 @@ const posts = [
   {
     id: uuidv4(),
     thumbnail: "/0/20220227/summary",
-    subject: "Angular Universal, Next.js, SveltKit 그리고 Nuxt의 비교!",
+    subject: "Angular Universal, Next.js, SvelteKit 그리고 Nuxt의 비교!",
     category: "Comparative Frameworks",
-    url: "/20220204",
+    url: "/20220227",
     datetime: "2022.02.27",
     badge: false,
     description: "CSR 방식으로 동작하는 Angular, React, Vue은 여기에 언급한 Angular Universal, Next.js, Nuxt를 사용하면 SSR 방식으로 사용할 수 있습니다. 참고로 Svelte는 애초에 SSR 방식으로 동작합니다.",

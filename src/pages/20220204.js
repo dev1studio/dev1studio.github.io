@@ -52,7 +52,7 @@ function ArticlePage() {
         previousAddress={`/20220113`}
         previousTitle={'Angular, React, Svelte 그리고 Vue를 이용해 개발 찍먹해보기'}
         nextAddress={`/20220227`}
-        nextTitle={'Angular Universal, Next.js, SveltKit 그리고 Nuxt의 비교!'}
+        nextTitle={'Angular Universal, Next.js, SvelteKit 그리고 Nuxt의 비교!'}
       />
       <PostComment />
     </Container>

@@ -11,12 +11,12 @@ import PostComment from '../components/utilities/utterances'
 function ArticlePage() {
   const siteAddress = `https://dev1stud.io/`
   const siteTitle = 'O612 DEV1L.studio'
-  const pageTitle = 'Angular Universal, Next.js, SveltKit 그리고 Nuxt의 비교!'
+  const pageTitle = 'Angular Universal, Next.js, SvelteKit 그리고 Nuxt의 비교!'
   const pageDateTime = '2022.02.27'
   const pageIdentifier = pageDateTime.replace(/\./g, '')
   const pageAddress = siteAddress + pageIdentifier
   const ogAddress = siteAddress + '0/' + pageIdentifier
-  const subTitle = '혹시 Angular Universal, Next.js 그리고 SveltKit이라고 들어봤니?'
+  const subTitle = '혹시 Angular Universal, Next.js 그리고 SvelteKit이라고 들어봤니?'
 
   return (
     <Container>
@@ -26,7 +26,7 @@ function ArticlePage() {
         canonical={pageAddress}
         metaTags={[{
           property: 'keywords',
-          content: 'angular, react, svelte, vue, angular universal, nextjs, sveltkit, 앵귤러, 리액트, 스벨트, 뷰, 유니버셜, 넥스트, 스벨트킷, 스벨트키트'
+          content: 'angular, react, svelte, vue, angular universal, nextjs, sveltekit, 앵귤러, 리액트, 스벨트, 뷰, 유니버셜, 넥스트, 스벨트킷, 스벨트키트'
         }]}
         openGraph={{
           type: 'article',
